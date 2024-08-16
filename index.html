@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Shopping List</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+          <i class="grocery-cart">🛒</i>
+          <h1>Grocery Pal</h1>
+      </header>
+  
+      <form id="item-form">
+        <div class="form-control">
+          <input
+            type="text"
+            class="form-input"
+            id="item-input"
+            name="item"
+            placeholder="Ready to create your shopping list? Add items here!"
+          />
+        </div>
+        <div class="form-control">
+          <button type="submit" class="btn">
+            <i class="fa-solid fa-plus"></i> 
+            <span>Add Item</span> 
+          </button> 
+          <button class="btn categorize">
+            <i class="fa-solid fa-sort"></i> 
+            <span>Sort Items</span>
+          </button>
+          <button id="clear" class="btn-clear">
+            <i class="fa-solid fa-trash"></i> 
+            <span>Clear All</span>
+          </button>
+          <button id="download" class="btn-download">
+            <i class="fa-solid fa-file-pdf"></i>
+            <span>Download PDF</span>
+          </button>
+        </div>
+      </form>
+ 
+      <div class="filter">
+        <input
+          type="text"
+          class="form-input-filter"
+          id="filter"
+          placeholder="Filter Items"
+        />
+      </div>
+      <ul id="itemList" class="items"></ul>
+      <ul id="sorted-list" class="sorted-items"></ul>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+    <script src="new-pdfgen.js"></script>
+    <script type="module" src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  </body>
+</html>

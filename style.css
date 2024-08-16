@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background: linear-gradient(270deg, #ffffff, #f5f5f5, #c2e1ec);
+  background-size: 600% 600%;
+  animation: Gradient 15s ease infinite;
+  height: 100vh;
+  margin: 0;
+}
+
+@keyframes Gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.container {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.edit-mode {
+  color: #ccc;
+}
+
+.grocery-cart {
+  font-size: 25px;
+}
+
+/* Form & Input */
+.form-input {
+  width: 100%;
+  font-size: 18px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+#item-input, #alert {
+  transition: all 1s ease;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  transition: box-shadow 0.7s ease-in-out;
+  transition: border 0.7s ease-in-out;
+  transition: background-color 0.7s ease-in-out;
+}
+
+.fade-in:hover {
+  background-color: #C3E2EB;
+  border: 1px solid black;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-out {
+  animation: fadeOut 0.5s forwards;
+  background: #F88379;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.form-input-filter {
+  margin-top: 20px;
+  width: 100%;
+  font-size: 18px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background: transparent;
+  outline: none;
+}
+
+.form-control {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.btn, .btn-clear, .btn-download {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.btn-download {
+  background-color: #580000;
+}
+
+.btn-clear {
+  background-color: #c30010;
+}
+
+.btn:hover {
+  background-color: #444;
+}
+
+.btn-clear:hover {
+  background-color: #77000a;
+}
+
+.text-red {
+  color: red;
+}
+
+.btn-link {
+  border: none;
+  background-color: transparent;
+}
+
+.btn-link:hover {
+  cursor: pointer;
+}
+
+.sorted-items {
+  /*remove list bullet points*/
+  list-style-type: none;
+}
+
+.sorted-item, .item {
+  list-style-type: none;
+  border: 1px solid #728393;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
