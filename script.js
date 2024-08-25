@@ -1,6 +1,5 @@
 import { 
     removeFromShoppingList, 
-    // createSortedCategory,
     handleInvalidEntry,  
     addToShoppingList,
     createItem, 
@@ -133,7 +132,6 @@ fInputContainer.addEventListener('input', sortItems);
 clearListBtn.addEventListener('click', clearItems);
 
 async function fetchItems() {
-    // const url = 'http://localhost:3000/'; //
     const url = 'https://shopping-list-application-f01bdb69eeca.herokuapp.com/';
     const requestOptions = {
         method: 'POST',
